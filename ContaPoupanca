@@ -1,0 +1,18 @@
+package polimorfismo;
+
+public class ContaPoupanca extends ContaBancaria {
+
+    double diarendimento;
+
+    public ContaPoupanca(String nomeCliente, int numConta, double saldo) {
+        super(nomeCliente, numConta, saldo);
+    }
+
+    public void CalculaNovoSaldo(double Taxaderendimento) {
+
+        setSaldo((getSaldo() * Taxaderendimento) + getSaldo());
+        System.out.println("O saldo da poupança é " + getSaldo());
+
+    }
+
+}
