@@ -1,0 +1,39 @@
+package polimorfismo;
+
+public class Polimorfismo {
+    
+    public static void main(String[] args) {
+        
+        ContaBancaria contaB = new ContaBancaria("jose", 4402558, 100.00);
+        ContaPoupanca contaP = new ContaPoupanca("joão pedro", 44022586, 500.00);
+        ContaEspecial contaE = new ContaEspecial("claudio", 55626493, 25000);
+        
+        System.out.println("_____________________-Conta normal-________________________");
+        System.out.println("Cliente: " + contaB.getNomeCliente());
+        System.out.println("Conta: " + contaB.getNumConta());
+        System.out.println("Conta: " + contaB.getSaldo());
+        System.out.println("");
+        System.out.println("Deposito: ");
+        contaB.depositar(100);
+        
+        System.out.println("Seu saldo é " + contaB.getSaldo());
+        System.out.println("Saque");
+        contaB.sacar(250);
+        System.out.println("Seu saldo é " + contaB.getSaldo());
+        
+        System.out.println("______________Conta poupança é ___________");
+        System.out.println("Cliente: " + contaP.getNomeCliente());
+        System.out.println("Conta: " + contaP.getNumConta());
+        System.out.println("Conta: " + contaP.getSaldo());
+        System.out.println("");
+        contaP.CalculaNovoSaldo(0.05);
+        
+        System.out.println("_________________Conta Especial______________");
+        System.out.println("Cliente: " + contaP.getNomeCliente());
+        System.out.println("Conta: " + contaP.getNumConta());
+        System.out.println("saldo: " + contaP.getSaldo());
+        System.out.println("");
+        contaE.sacar(100000);
+    }
+    
+}
