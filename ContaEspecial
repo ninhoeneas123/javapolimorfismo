@@ -1,0 +1,25 @@
+package polimorfismo;
+
+public class ContaEspecial extends ContaBancaria {
+
+    double limite = 10000;
+    
+
+    public ContaEspecial(String nomeCliente, int numConta, double saldo) {
+        super(nomeCliente, numConta, saldo);
+    }
+
+    @Override
+
+    public void sacar(double valor) {
+
+        if (valor>10000) {
+            System.out.println("Não é possivel realizar a operação");
+        } else {
+setSaldo(getSaldo()-valor);
+    
+        }
+        System.out.println("O seu saldo é: "+getSaldo());
+    }
+
+}
